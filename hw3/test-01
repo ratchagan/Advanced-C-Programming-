@@ -1,0 +1,44 @@
+//
+//  main.c
+//  c_interview
+//
+//  Created by Ranjitha Ratchagan on 6/8/17.
+//  Copyright © 2017 Ranjitha Ratchagan. All rights reserved.
+//
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(){
+
+    char input[100],c;
+    int i,flag;
+    double val;
+    
+    while(input[0]!='\n'){
+        
+        flag =0;
+        c = getchar();
+    scanf("%c",&input);
+    if(isdigit(input[0])){
+        int len = strlen(input);
+        for(i=0;i<len;i++){
+            if(input[i]=='.')
+                flag = 1;
+        }
+        if(flag==1){
+            val = (float) atof(input);
+            val = val+1;
+            printf("%f",val);
+        }
+        else{
+            
+        }
+    }
+    else{
+        printf("It is a word");
+    }
+    }
+
+}
+
